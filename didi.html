@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Download</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .image-container {
+            position: relative;
+            max-width: 100%;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .download-button {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            padding: 8px 16px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .download-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="path/to/your/image.png" alt="Image Preview">
+        <a href="#" id="download-button" class="download-button">Download</a>
+    </div>
+
+    <script>
+        const downloadButton = document.getElementById('download-button');
+        const imageSrc = 'path/to/your/image.png'; // Replace with your image URL
+
+        downloadButton.addEventListener('click', () => {
+            const link = document.createElement('a');
+            link.href = imageSrc;
+            link.download = 'downloaded_image.png';
+            link.target = '_blank';
+            link.click();
+        });
+    </script>
+</body>
+</html>
