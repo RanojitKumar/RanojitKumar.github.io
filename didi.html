@@ -44,21 +44,8 @@
 </head>
 <body>
     <div class="image-container">
-        <img src="path/to/your/image.png" alt="Image Preview">
-        <a href="#" id="download-button" class="download-button">Download</a>
+        <img src="https://ranojit.com/didi.png" alt="Image Preview">
+        <a href="https://ranojit.com/didi.png" id="download-button" class="download-button" download>Download</a>
     </div>
-
-    <script>
-        const downloadButton = document.getElementById('download-button');
-        const imageSrc = 'path/to/your/image.png'; // Replace with your image URL
-
-        downloadButton.addEventListener('click', () => {
-            const link = document.createElement('a');
-            link.href = imageSrc;
-            link.download = 'downloaded_image.png';
-            link.target = '_blank';
-            link.click();
-        });
-    </script>
 </body>
 </html>
